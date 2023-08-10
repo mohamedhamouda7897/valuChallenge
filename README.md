@@ -5,15 +5,8 @@ If you need run a unit test please run this command first :
 flutter pub run build_runner build
 
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20230810-035927](https://github.com/mohamedhamouda7897/valuChallenge/assets/101247843/0934b59e-424a-44b4-94ee-59cd7cec211a)
+![Screenshot_20230810-035917](https://github.com/mohamedhamouda7897/valuChallenge/assets/101247843/ffffedbc-373e-4ed8-94aa-c7fbcd497cd0)
