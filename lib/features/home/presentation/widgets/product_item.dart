@@ -4,9 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/text_styles.dart';
 import '../../domain/entities/product_entity.dart';
-import '../cubit/home_cubit.dart';
 
 class ProductItem extends StatelessWidget {
   final ProductEntity productEntity;
@@ -43,7 +41,7 @@ class ProductItem extends StatelessWidget {
                         child: CircularProgressIndicator(
                             value: downloadProgress.progress),
                       ),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 )
               ],
             ),
@@ -55,7 +53,7 @@ class ProductItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
               productEntity.title ?? '',
-              style: GoogleFonts.poppins(color: Color(0xff004182))
+              style: GoogleFonts.poppins(color: const Color(0xff004182))
                   .copyWith(height: 1.1),
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -81,14 +79,14 @@ class ProductItem extends StatelessWidget {
               children: [
                 Text(
                   'Review',
-                  style: GoogleFonts.poppins(color: Color(0xff004182).withOpacity(.3))
+                  style: GoogleFonts.poppins(color: const Color(0xff004182).withOpacity(.3))
                       .copyWith(height: 1.1),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),
                 Text(
                   '(4.5)',
-                  style: GoogleFonts.poppins(color:Color(0xff004182).withOpacity(.3)),
+                  style: GoogleFonts.poppins(color:const Color(0xff004182).withOpacity(.3)),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),

@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:valu_challenge/core/error/cache_failures.dart';
 import 'package:valu_challenge/core/error/server_failures.dart';
 import 'package:valu_challenge/core/network/network_info.dart';
 import 'package:valu_challenge/features/home/domain/entities/product_entity.dart';

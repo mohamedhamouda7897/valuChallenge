@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: AppColors.primary,
-              title: Text("Valu Challenge"),
+              title: const Text("Valu Challenge"),
             ),
             body: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
