@@ -1,6 +1,9 @@
 
+import 'package:dartz/dartz.dart';
+
+import '../../../../core/error/failures.dart';
 import '../models/product_model.dart';
 
 abstract class HomeDataSources {
-  Future<List<ProductModel>> getAllProducts();
+  Future<Either<Failures,List<ProductModel>>> getAllProducts();
 }

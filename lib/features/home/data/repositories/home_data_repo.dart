@@ -17,9 +17,7 @@ class HomeDataRepo implements HomeDomainRepo {
   @override
   Future<Either<Failures, List<ProductModel>>> getAllProducts() async {
     try {
-
-      List<ProductModel> productsList = await homeDataSources.getAllProducts();
-      return Right(productsList);
+      return  homeDataSources.getAllProducts();
     } catch (e) {
       if (e is DioException) {
         return Left(ServerFailures.fromDioException(e));

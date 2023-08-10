@@ -47,6 +47,8 @@ dependencies:
   shared_preferences: ^2.2.0
   cached_network_image: ^3.2.3
   injectable: ^2.1.2
+  mockito: ^5.4.2
+  build_runner: ^2.4.6
 
 dev_dependencies:
   flutter_test:

@@ -21,10 +21,9 @@ import '../../features/home/data/datasources/home_remote_dto.dart' as _i13;
 import '../../features/home/data/repositories/home_data_repo.dart' as _i15;
 import '../../features/home/domain/repositories/home_domain_repo.dart' as _i14;
 import '../../features/home/domain/usecases/get_all_products_use_case.dart'
-as _i30;
+    as _i30;
 
-
-
+import '../../features/home/presentation/cubit/home_cubit.dart' as _i31;
 import 'injection_container.dart' as _i32;
 
 extension GetItInjectableX on _i1.GetIt {
@@ -46,10 +45,19 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i6.ApiService>(() => _i6.ApiService(gh<_i4.Dio>()));
 
     gh.lazySingleton<_i12.HomeDataSources>(
-        () => _i13.HomeRemoteDto(apiService: gh<_i6.ApiService>()));
+        () => _i13.HomeRemoteDataSource(apiService: gh<_i6.ApiService>()));
     gh.lazySingleton<_i14.HomeDomainRepo>(
         () => _i15.HomeDataRepo(homeDataSources: gh<_i12.HomeDataSources>()));
-    gh.lazySingleton<_i30.GetAllProductsUseCase>(() =>_i30.GetAllProductsUseCase(homeDomainRepo: gh<_i14.HomeDomainRepo>()));
+    gh.lazySingleton<_i30.GetAllProductsUseCase>(() =>
+        _i30.GetAllProductsUseCase(homeDomainRepo: gh<_i14.HomeDomainRepo>()));
+    gh.lazySingleton<_i31.HomeCubit>(() => _i31.HomeCubit(
+        networkInfo: _i5.NetworkInfoImpl(_i3.Connectivity()),
+        getAllProductsUseCase: _i30.GetAllProductsUseCase(
+            homeDomainRepo: _i15.HomeDataRepo(
+                homeDataSources: _i13.HomeRemoteDataSource(
+          apiService: _i6.ApiService(_i4.Dio()),
+        )))));
+
     return this;
   }
 }
