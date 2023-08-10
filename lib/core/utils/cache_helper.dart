@@ -1,5 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+
+// if you need cache products in local DB
 class CacheHelper {
   static late SharedPreferences sharedPreferences;
 

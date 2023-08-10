@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:valu_challenge/config/routes/routes.dart';
 import 'package:valu_challenge/core/utils/app_colors.dart';
 import 'package:valu_challenge/features/home/presentation/cubit/home_cubit.dart';
@@ -32,7 +33,9 @@ class HomeScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               backgroundColor: AppColors.primary,
-              title: const Text("Valu Challenge"),
+              title:  Text("Valu Challenge",style: GoogleFonts.elMessiri(
+                fontSize: 26.sp
+              ),),
             ),
             body: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
