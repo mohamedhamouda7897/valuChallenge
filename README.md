@@ -1,5 +1,6 @@
 # valu_challenge
-
+The application has been implemented in a clean architecture , using dependency injection and implementing the principles of ٍSOLID
+Unit testing has been added
 If you need run a unit test please run this command first :
 
 flutter pub run build_runner build
