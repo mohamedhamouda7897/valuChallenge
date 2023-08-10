@@ -1,6 +1,9 @@
 # valu_challenge
 
-A new Flutter project.
+If you need run a unit test please run this command first :
+
+flutter pub run build_runner build
+
 
 ## Getting Started
 
