@@ -20,17 +20,17 @@ class HomeRemoteDataSource implements HomeDataSources {
   Future<Either<Failures, List<ProductModel>>> getAllProducts() async {
     try {
       var data = await apiService.get(endPoint: EndPoints.allProducts);
-      List<ProductModel> productList = parseCourseData(data);
+      List<ProductModel> productList = parseProductData(data);
       return Right(productList);
     } catch (e) {
       return Left(ServerFailures(e.toString()));
     }
   }
 
-  List<ProductModel> parseCourseData(List<dynamic> data) {
+  List<ProductModel> parseProductData(List<dynamic> data) {
     List<ProductModel> productsList = [];
-    for (var courseMap in data) {
-      productsList.add(ProductModel.fromJson(courseMap));
+    for (var product in data) {
+      productsList.add(ProductModel.fromJson(product));
     }
     return productsList;
   }

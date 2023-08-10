@@ -17,7 +17,7 @@ import 'package:injectable/injectable.dart' as _i2;
 import '../../core/api/api_service.dart' as _i6;
 import '../../core/network/network_info.dart' as _i5;
 import '../../features/home/data/datasources/home_data_sources.dart' as _i12;
-import '../../features/home/data/datasources/home_remote_dto.dart' as _i13;
+import '../../features/home/data/datasources/home_remote_data_source.dart' as _i13;
 import '../../features/home/data/repositories/home_data_repo.dart' as _i15;
 import '../../features/home/domain/repositories/home_domain_repo.dart' as _i14;
 import '../../features/home/domain/usecases/get_all_products_use_case.dart'

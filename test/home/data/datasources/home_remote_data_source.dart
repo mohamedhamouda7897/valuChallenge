@@ -6,7 +6,7 @@ import 'package:valu_challenge/core/api/api_service.dart';
 import 'package:valu_challenge/core/api/end_points.dart';
 import 'package:valu_challenge/core/error/failures.dart';
 import 'package:valu_challenge/core/error/server_failures.dart';
-import 'package:valu_challenge/features/home/data/datasources/home_remote_dto.dart';
+import 'package:valu_challenge/features/home/data/datasources/home_remote_data_source.dart';
 import 'package:valu_challenge/features/home/data/models/product_model.dart';
 
 import 'home_remote_data_source.mocks.dart';
